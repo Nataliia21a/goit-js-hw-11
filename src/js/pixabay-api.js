@@ -18,20 +18,3 @@ export const fetchPhotosByQuery = (query = 'dog') => {
     return response.json();
   });
 };
-
-// const onBtnClick = event => {
-//   event.preventDefault();
-//   const searchParams = new URLSearchParams({
-//     key: apiKey,
-//     q: `${searchquery.value}`,
-//     image_type: 'photo',
-//     orientation: 'horizontal',
-//     safesearch: 'true',
-//   });
-
-//   return fetch(`${BASE_URL}?${searchParams}`).then(response =>
-//     console.log(response)
-//   );
-// };
-
-// ;
