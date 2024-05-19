@@ -20,7 +20,7 @@ const loader = document.querySelector('.loader');
 function onBtnSubmit(event) {
   event.preventDefault();
   const searchImages = event.target.elements.searchImages.value.trim();
-  console.log(searchImages);
+
   if (searchImages === '') {
     galleryEl.innerHTML = '';
     event.target.reset();
@@ -38,8 +38,6 @@ function onBtnSubmit(event) {
 
   fetchPhotosByQuery(searchImages)
     .then(imageData => {
-      console.log(imageData);
-
       if (imageData.total === 0) {
         iziToast.show({
           message: 'Sorry, there are no images for this query',
